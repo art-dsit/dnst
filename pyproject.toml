@@ -10,8 +10,8 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
-dep = { git = "git@github.com:art-dsit/dep.git" }
-graphrag = { git = "https://github.com/microsoft/graphrag.git" }
+dep = { git = "git@github.com:art-dsit/dep.git", branch = "gitssh" }
+graphrag = { git = "git@github.com:microsoft/graphrag.git" }
 
 [build-system]
 requires = ["poetry-core"]
