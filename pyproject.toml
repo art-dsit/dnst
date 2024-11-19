@@ -9,7 +9,8 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<3.13"
+dep = { git = "git@github.com:art-dsit/dep.git" }
 
 [build-system]
 requires = ["poetry-core"]
