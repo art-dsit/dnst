@@ -15,13 +15,11 @@ graphrag = { git = "git@github.com:microsoft/graphrag.git" }
 
 # created by uvx pdm import pyproject.toml
 # locked with uv sync --dev --all-extras
+
 [tool.pdm.build]
 includes = [
     "src/dnst",
 ]
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
 
 [project]
 authors = [
@@ -29,9 +27,13 @@ authors = [
 ]
 requires-python = "<3.13,>=3.12"
 dependencies = [
-    "dep @ git+ssh://git@github.com/art-dsit/dep.git",
-    "graphrag @ git+https://github.com/microsoft/graphrag.git",
+    "dep @ git+ssh://git@github.com/art-dsit/dep.git@gitssh",
+    "graphrag @ git+ssh://git@github.com/microsoft/graphrag.git",
 ]
 name = "dnst"
 version = "0.1.0"
 description = "UPS"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

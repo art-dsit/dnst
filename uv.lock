@@ -307,7 +307,7 @@ wheels = [
 [[package]]
 name = "dep"
 version = "0.1.0"
-source = { git = "ssh://git@github.com/art-dsit/dep.git#86e80afb0632a7e53bb51863dda4735b64ce342c" }
+source = { git = "ssh://git@github.com/art-dsit/dep.git?rev=gitssh#df13884f535f754dd605c2528cc555e8c7d0cf09" }
 dependencies = [
     { name = "graphrag" },
     { name = "pydantic" },
@@ -359,8 +359,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dep", git = "ssh://git@github.com/art-dsit/dep.git" },
-    { name = "graphrag", git = "https://github.com/microsoft/graphrag.git" },
+    { name = "dep", git = "ssh://git@github.com/art-dsit/dep.git?rev=gitssh" },
+    { name = "graphrag", git = "ssh://git@github.com/microsoft/graphrag.git" },
 ]
 
 [[package]]
@@ -448,7 +448,7 @@ wheels = [
 [[package]]
 name = "graphrag"
 version = "1.2.0"
-source = { git = "https://github.com/microsoft/graphrag.git#dd884c0ce2a3f4b29a5fa63008d7d18a65d319c5" }
+source = { git = "ssh://git@github.com/microsoft/graphrag.git#dd884c0ce2a3f4b29a5fa63008d7d18a65d319c5" }
 dependencies = [
     { name = "aiofiles" },
     { name = "azure-cosmos" },
