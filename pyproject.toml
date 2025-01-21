@@ -10,10 +10,30 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
-dep = { git = "git@github.com:art-dsit/dep.git" }
-graphrag = { git = "https://github.com/microsoft/graphrag.git" }
+dep = { git = "git@github.com:art-dsit/dep.git", branch = "gitssh" }
+graphrag = { git = "git@github.com:microsoft/graphrag.git" }
+
+# created by uvx pdm import pyproject.toml
+# locked with uv sync --dev --all-extras
+
+[tool.pdm.build]
+includes = [
+    "src/dnst",
+]
+
+[project]
+authors = [
+    {name = "Nobody"},
+]
+requires-python = "<3.13,>=3.12"
+dependencies = [
+    "dep @ git+ssh://git@github.com/art-dsit/dep.git@gitssh",
+    "graphrag @ git+ssh://git@github.com/microsoft/graphrag.git",
+]
+name = "dnst"
+version = "0.1.0"
+description = "UPS"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
